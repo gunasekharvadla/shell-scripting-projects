@@ -1,0 +1,77 @@
+===================================
+       LOG ANALYSIS REPORT         
+===================================
+
+Generated : Thu Jul 23 05:20:52 AM UTC 2026
+
+========== LOG STATISTICS ==========
+Access Log Lines      : 10
+Application Log Lines : 10
+System Log Lines      : 10
+Total Log Lines       : 30
+
+========== LOG ANALYSIS ==========
+ERROR Count   : 3
+WARNING Count : 2
+INFO Count    : 5
+HTTP Status Codes
+200 OK                  : 5
+401 Unauthorized        : 1
+403 Forbidden           : 1
+404 Not Found           : 1
+500 Internal Server Err : 2
+Successful Logins : 2
+Failed Logins     : 2
+
+========== TOP IP ADDRESSES ==========
+      4 192.168.1.10
+      2 192.168.1.12
+      2 192.168.1.11
+      1 192.168.1.20
+      1 192.168.1.15
+
+========== URL ANALYSIS ==========
+
+Top Requested URLs
+     10 HTTP/1.1"
+
+HTTP Request Methods
+GET Requests  : 8
+POST Requests : 2
+
+========== ADVANCED LOG ANALYSIS ==========
+
+Top Error Messages
+      1 2026-07-22 10:08:50 ERROR Authentication failed
+      1 2026-07-22 10:05:20 ERROR API timeout
+      1 2026-07-22 10:03:35 ERROR Database connection failed
+
+Top Warning Messages
+      1 2026-07-22 10:06:45 WARNING Disk usage exceeded 80%
+      1 2026-07-22 10:02:20 WARNING High memory usage detected
+
+Disk Related Errors
+2026-07-22 10:06:45 WARNING Disk usage exceeded 80%
+Jul 22 10:03:20 server kernel: Disk read error
+
+Memory Related Warnings
+2026-07-22 10:02:20 WARNING High memory usage detected
+Jul 22 10:06:40 server kernel: Memory allocation warning
+
+Authentication Failures
+Jul 22 10:02:15 server sshd: Failed password for root
+Jul 22 10:05:35 server sshd: Failed password for user
+
+========== SUMMARY ==========
+
+Total Errors           : 3
+Total Warnings         : 2
+Failed Login Attempts  : 2
+Total Issues Detected  : 7
+
+Overall Health : CRITICAL
+
+===================================
+End of Report
+Generated On : Thu Jul 23 05:20:53 AM UTC 2026
+===================================
