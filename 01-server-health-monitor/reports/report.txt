@@ -1,0 +1,151 @@
+===================================
+       SERVER HEALTH REPORT        
+===================================
+
+Hostname : guna
+Date     : Mon Jul 20 11:35:56 AM UTC 2026
+User     : guna
+
+========== CPU INFORMATION ==========
+CPU Cores : 2
+CPU Model :                               Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz
+Load Average :  0.00, 0.04, 0.05
+CPU Usage : 4.5 %
+
+========== MEMORY INFORMATION ==========
+Total Memory     : 3.3Gi
+Used Memory      : 688Mi
+Free Memory      : 1.6Gi
+Available Memory : 2.6Gi
+Memory Usage     : 21%
+
+========== DISK INFORMATION ==========
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv   24G  7.8G   15G  35% /
+/dev/sda2                          2.0G  183M  1.7G  10% /boot
+
+Root Filesystem Usage : 35%
+Status : OK
+
+========== PROCESS INFORMATION ==========
+
+Top CPU Consuming Processes
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+guna        6307  2.9  0.1   7668  4012 pts/2    S+   11:35   0:00 /bin/bash ./health-check.sh
+root           1  0.4  0.4  25300 16636 ?        Ss   08:34   0:50 /usr/lib/systemd/systemd --switched-root --system --deserialize=51
+guna        4130  0.4  0.2  18844  8008 ?        S    10:15   0:20 sshd-session: guna@pts/2
+root        2943  0.4  1.3 491088 47372 ?        Ssl  09:04   0:36 /usr/libexec/fwupd/fwupd
+root        1322  0.3  0.3 179652 10952 ?        Ssl  08:34   0:39 /usr/bin/vmtoolsd
+
+Top Memory Consuming Processes
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root        1855  0.0  2.4 1907048 82708 ?       Ssl  08:34   0:08 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1508  0.2  1.5 1793224 51604 ?       Ssl  08:34   0:22 /usr/bin/containerd
+root        2943  0.4  1.3 491088 47372 ?        Ssl  09:04   0:36 /usr/libexec/fwupd/fwupd
+root        1463  0.0  0.9 126100 33016 ?        Ssl  08:34   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root        1368  0.0  0.8  46728 30284 ?        Ss   08:34   0:02 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+
+Total Processes : 230
+Zombie Processes : 0
+
+========== SERVICE INFORMATION ==========
+ssh : RUNNING
+docker : RUNNING
+nginx : STOPPED
+jenkins : STOPPED
+
+Failed Services:
+  UNIT                  LOAD   ACTIVE SUB    DESCRIPTION
+● fwupd-refresh.service loaded failed failed Refresh fwupd metadata and update motd
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+1 loaded units listed.
+
+========== NETWORK INFORMATION ==========
+IP Address : 192.168.241.134 
+Gateway : 192.168.241.2
+Interface : ens33
+Internet : Connected
+DNS Resolution : Working
+
+========== FILESYSTEM INFORMATION ==========
+
+Top 10 Largest Directories
+3.8G	/swap.img
+3.5G	/usr
+473M	/var
+183M	/boot
+6.3M	/etc
+1.6M	/run
+164K	/home
+16K	/lost+found
+8.0K	/snap
+8.0K	/opt
+
+Top Large Files (>100MB)
+/sys/devices/pci0000:00/0000:00:0f.0/resource1
+/sys/devices/pci0000:00/0000:00:0f.0/resource1_wc
+/proc/kcore
+/usr/lib/x86_64-linux-gnu/libLLVM.so.21.1
+/swap.img
+
+Recently Modified Files
+/var/log/vmware-vmsvc-root.log
+/var/log/kern.log
+/var/log/vmware-network.log
+/var/log/unattended-upgrades/unattended-upgrades.log
+/var/log/journal/cf9ff4bcf5184a819ba314adf1ac0f6f/user-1000.journal
+/var/log/journal/cf9ff4bcf5184a819ba314adf1ac0f6f/system.journal
+/var/log/auth.log
+/var/log/syslog
+/var/log/wtmp
+/var/log/lastlog
+
+Empty Files in /tmp
+
+Inode Usage
+Filesystem                         Inodes  IUsed   IFree IUse% Mounted on
+tmpfs                              819200    976  818224    1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv 1572864 155289 1417575   10% /
+tmpfs                              428881      1  428880    1% /dev/shm
+none                                 1024      1    1023    1% /run/credentials/systemd-journald.service
+none                                 1024      1    1023    1% /run/credentials/systemd-resolved.service
+tmpfs                             1048576     19 1048557    1% /tmp
+/dev/sda2                          131072    343  130729    1% /boot
+none                                 1024      1    1023    1% /run/credentials/getty@tty1.service
+tmpfs                               85776     35   85741    1% /run/user/1000
+none                                 1024      1    1023    1% /run/credentials/systemd-networkd.service
+
+========== SECURITY INFORMATION ==========
+
+Logged In Users:
+
+Recent Login Activity:
+
+Failed Login Attempts:
+
+Open Network Ports:
+Netid State  Recv-Q Send-Q         Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0                 127.0.0.54:53         0.0.0.0:*          
+udp   UNCONN 0      0              127.0.0.53%lo:53         0.0.0.0:*          
+udp   UNCONN 0      0      192.168.241.134%ens33:68         0.0.0.0:*          
+udp   UNCONN 0      0                  127.0.0.1:323        0.0.0.0:*          
+udp   UNCONN 0      0                      [::1]:323           [::]:*          
+tcp   LISTEN 0      4096              127.0.0.54:53         0.0.0.0:*          
+tcp   LISTEN 0      4096               127.0.0.1:46471      0.0.0.0:*          
+tcp   LISTEN 0      4096           127.0.0.53%lo:53         0.0.0.0:*          
+tcp   LISTEN 0      4096                 0.0.0.0:22         0.0.0.0:*          
+tcp   LISTEN 0      4096                    [::]:22            [::]:*          
+
+Sudo Users:
+sudo:x:27:guna
+
+========== SUMMARY ==========
+Server Health Check Completed
+Hostname : guna
+Time : Mon Jul 20 11:36:02 AM UTC 2026
+
+WARNING CPU HIGH : 100%
